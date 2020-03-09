@@ -1,0 +1,269 @@
+/* ódýrt (en ekki gott!) reset á margin og padding á element sem má nota */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* setjum box-sizing: border-box; á allt */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  background: radial-gradient(circle, #000, #1e1d1b, #6d6b67);
+}
+
+a {
+  text-decoration: none;
+}
+
+/** fyrirsagnir **/
+
+h1,
+h2,
+h3 {
+  font-family: "Droid Serif", serif;
+}
+
+/** haus **/
+
+header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 600px;
+  background: transparent url(./myndir/banner2020Logo.jpg) no-repeat fixed 50% 0;
+  background-size: contain;
+}
+
+header .content {
+  margin: auto;
+}
+
+header img {
+  width: 15em;
+}
+
+/** meginmál **/
+
+main {
+  margin: 0 auto;
+  padding: 2em;
+  width: auto;
+  max-width: 1200px;
+}
+
+.syningar,
+.videodiv,
+.umdiv,
+.takkadiv {
+  display: flex;
+  justify-content: center;
+}
+
+iframe {
+  margin: auto;
+  padding: 2em;
+}
+
+.syning1,
+.syning2,
+.umdiv {
+  width: 20em;
+  padding: 3em;
+  background-color: #1e1d1b;
+  border-radius: 6px;
+  color: #fff;
+}
+
+.syning1 {
+  margin-right: 1em;
+}
+
+.syning2 {
+  margin-left: 1em;
+}
+
+.umdiv {
+  width: 70%;
+  flex-direction: column;
+  margin: 2em auto;
+}
+
+.umdiv > p {
+  padding: 1em;
+}
+.umdiv a:first-of-type {
+  color: #00aeea;
+}
+.umdiv a:last-of-type {
+  color: #ebb134;
+}
+
+.umdiv > h2,
+.umdiv > h1 {
+  padding-bottom: 1em;
+  margin: auto;
+}
+
+.syning {
+  padding-bottom: 1em;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  padding: 1em 0;
+}
+
+.logodiv {
+  display: flex;
+}
+
+.logodiv > img {
+  margin: auto;
+  display: block;
+  max-width: 230px;
+  max-height: 95px;
+  width: auto;
+  height: auto;
+}
+
+/** Takkar **/
+
+.takkadiv {
+  display: flex;
+  margin: auto;
+  margin-bottom: 2em;
+  background-color: #1e1d1b;
+  border-radius: 6px;
+  color: #fff;
+  padding: 2em 3em;
+  width: 70%;
+}
+
+.takkadiv p {
+  padding: 1em;
+  padding-left: 0;
+  width: 80%;
+}
+
+.kaupa {
+  color: #666;
+}
+
+button {
+  display: inline-block;
+  margin: auto 4em;
+  padding: 10px 5px;
+  border: 1px solid #666;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 256px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #666;
+  background-color: #ffe566;
+  font-size: 1rem;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: all 500ms ease-in-out;
+}
+
+button:hover {
+  color: #000;
+  background-color: #2c8c43;
+}
+
+@media (max-width: 800px) {
+  body {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding: 0 2em;
+  }
+
+  main {
+    padding: 0;
+  }
+
+  .syningar,
+  .takkadiv {
+    flex-direction: column;
+    margin: auto;
+  }
+
+  .takkadiv {
+    margin-bottom: 2em;
+  }
+
+  .syning1,
+  .syning2 {
+    margin: auto;
+    width: 80%;
+    margin-bottom: 2em;
+  }
+
+  .umdiv,
+  .takkadiv {
+    width: 80%;
+    align-items: center;
+  }
+
+  .takkadiv p {
+    width: 100%;
+  }
+
+  header {
+    background: none;
+    margin: auto;
+  }
+
+  .content {
+    margin: auto;
+  }
+
+  .umdiv p,
+  .takkadiv p {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  iframe {
+    height: 16.2rem;
+    width: 30rem;
+  }
+}
+
+@media (max-width: 2000px) {
+  header {
+    background-size: auto;
+    min-height: 600px;
+  }
+}
+
+@media (max-width: 600px) {
+  html {
+    width: fit-content;
+  }
+
+  header {
+    min-height: 350px;
+    max-height: 450px;
+  }
+
+  body {
+    padding: 0;
+    width: 100%;
+  }
+
+  .umdiv {
+    width: auto;
+  }
+}
